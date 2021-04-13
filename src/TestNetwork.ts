@@ -25,6 +25,15 @@ const DEFAULT_GENESIS_ACCOUNTS = [
 ];
 const DEFAULT_JSON_RPC_PORT = 8545;
 const DEFAULT_BLOCK_GAS_LIMIT = 6000000;
+
+interface TestNetworkInitParams {
+  jsonRPC: boolean;
+  port: number;
+  chainId: number;
+  networkId: number;
+  genesisAccounts: GenesisAccount[];
+  blockGasLimit: number;
+}
 export class TestNetwork {
   provider: BackwardsCompatibilityProviderAdapter;
   server?: JsonRpcServer;
@@ -37,24 +46,15 @@ export class TestNetwork {
     this.server = params.server;
   }
 
-  static async init(
-    params: {
-      jsonRPC?: boolean;
-      port?: number;
-      chainId?: number;
-      networkId?: number;
-      genesisAccounts?: GenesisAccount[];
-      blockGasLimit?: number;
-    } = {},
-  ) {
-    params = {
+  static async init(_params: Partial<TestNetworkInitParams> = {}) {
+    const params: TestNetworkInitParams = {
       jsonRPC: true,
       genesisAccounts: DEFAULT_GENESIS_ACCOUNTS,
       chainId: DEFAULT_CHAIN_ID,
       networkId: DEFAULT_NETWORK_ID,
       port: DEFAULT_JSON_RPC_PORT,
       blockGasLimit: DEFAULT_BLOCK_GAS_LIMIT,
-      ...params,
+      ..._params,
     };
     const logger = new HardhatNetworkFakeModuleLogger(true);
     const hardhatNetwork = new HardhatNetworkProvider(
