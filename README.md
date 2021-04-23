@@ -6,17 +6,19 @@
 
 Just a wrapper around [hardhat-network](https://github.com/nomiclabs/hardhat/blob/767f68dee84d6a47cd40153a8ab8552f41a95d5e/packages/hardhat-core/test/internal/hardhat-network/helpers/useProvider.ts)
 
-NPM
+## NPM
 
 ```
 npm i --save-dev ethereum-test-network
 ```
 
-Yarn
+## Yarn
 
 ```
 yarn add --dev ethereum-test-network
 ```
+
+## Use its
 
 ```ts
 import { TestNetwork } from 'ethereum-test-network';
@@ -38,6 +40,32 @@ describe('eth test network', () => {
     expect(blockNumber).toBe(0);
   });
 });
+```
+
+## Defaults
+
+```
+const DEFAULT_CHAIN_ID = 123;
+const DEFAULT_NETWORK_ID = 234;
+const DEFAULT_GENESIS_ACCOUNTS = [
+  {
+    balance: '0x295BE96E64066972000000',
+    privateKey:
+      '0xa3dac6ca0b1c61f5f0a0b3a0acf93c9a52fd94e8e33d243d3b3a8b8c5dc37f0b', // 0xaaE062157B53077da1414ec3579b4CBdF7a4116f
+  },
+  {
+    balance: '0x295BE96E64066972000000',
+    privateKey:
+      '0xfc6e27fbc1cc2eb3f04dab6259d926280d4aa8acb8c83f3de506ab9d589d6cc2', // 0xbbDBFf23Df1e064f458aCd943E48179bD3271fA0
+  },
+  {
+    balance: '0x295BE96E64066972000000',
+    privateKey:
+      '0x735e4ab2cd08798dee1a5fc3a7af4bbdeece90c7dbdf878ceec556c84bd5ec88', // 0xcc5a0dc5152D368D55A10f68f874A05A4dd65bee
+  },
+];
+const DEFAULT_JSON_RPC_PORT = 8545;
+const DEFAULT_BLOCK_GAS_LIMIT = 6000000;
 ```
 
 ## Available Scripts

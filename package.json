@@ -1,6 +1,6 @@
 {
   "name": "ethereum-test-network",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hardhat network to spin up for testing",
   "engines": {
     "node": ">= 14.16 <15"
