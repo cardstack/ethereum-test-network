@@ -1,12 +1,12 @@
 {
   "name": "ethereum-test-network",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hardhat network to spin up for testing",
   "engines": {
     "node": ">= 14.16 <15"
   },
   "repository": "https://github.com/RobertoSnap/ethereum-test-network",
-  "directories": {"bin": "./dist"},
+  "files": ["./lib/**"],
   "main": "./index.js",
   "typings": "./index.d.ts",
   "devDependencies": {
