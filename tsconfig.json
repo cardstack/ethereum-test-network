@@ -18,10 +18,12 @@
     "noImplicitThis": false,
     "skipLibCheck": true,
     "strictNullChecks": false,
-    "declaration": true
+    "declaration": true,
+    "rootDir": "src",
   },
   "include": [
     "src/**/*",
     "__tests__/**/*"
-  ]
+  ],
+  "exclude": ["node_modules", "build"]
 }

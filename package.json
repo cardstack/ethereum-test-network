@@ -1,10 +1,11 @@
 {
   "name": "ethereum-test-network",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Hardhat network to spin up for testing",
   "engines": {
     "node": ">= 14.16 <15"
   },
+  "files": ["./build/src"],
   "main": "./build/src/index.js",
   "typings": "./build/src/index.d.ts",
   "devDependencies": {
