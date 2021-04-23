@@ -6,9 +6,9 @@
     "node": ">= 14.16 <15"
   },
   "repository": "https://github.com/RobertoSnap/ethereum-test-network",
-  "files": ["./build/src"],
-  "main": "./build/src/index.js",
-  "typings": "./build/src/index.d.ts",
+  "directories": {"bin": "./dist"},
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "devDependencies": {
     "@types/jest": "~26.0.20",
     "@types/node": "~14.14.31",
