@@ -5,6 +5,7 @@
   "engines": {
     "node": ">= 14.16 <15"
   },
+  "repository": "https://github.com/RobertoSnap/ethereum-test-network",
   "files": ["./build/src"],
   "main": "./build/src/index.js",
   "typings": "./build/src/index.d.ts",
