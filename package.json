@@ -1,14 +1,14 @@
 {
   "name": "ethereum-test-network",
-  "version": "0.0.5",
+  "version": "0.0.9",
   "description": "Hardhat network to spin up for testing",
   "engines": {
     "node": ">= 14.16 <15"
   },
   "repository": "https://github.com/RobertoSnap/ethereum-test-network",
-  "files": ["./lib/**/*"],
-  "main": "./index.js",
-  "typings": "./index.d.ts",
+  "files": ["lib/"],
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "devDependencies": {
     "@types/jest": "~26.0.20",
     "@types/node": "~14.14.31",
@@ -17,8 +17,6 @@
     "eslint": "~7.21.0",
     "eslint-config-prettier": "~8.1.0",
     "eslint-plugin-jest": "~24.1.5",
-    "ethers": "^5.1.0",
-    "hardhat": "^2.1.2",
     "jest": "~26.6.3",
     "prettier": "~2.2.1",
     "rimraf": "~3.0.2",
@@ -34,11 +32,13 @@
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "prepublish": "npm build"
+    "prepublish": "npm run build"
   },
   "author": "Robertosnap <github@jakubsynowiec.info>",
   "license": "Apache-2.0",
   "dependencies": {
+    "ethers": "^5.1.0",
+    "hardhat": "^2.1.2",
     "tslib": "~2.1.0"
   },
   "volta": {

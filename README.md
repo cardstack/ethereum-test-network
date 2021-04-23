@@ -6,7 +6,21 @@
 
 Just a wrapper around [hardhat-network](https://github.com/nomiclabs/hardhat/blob/767f68dee84d6a47cd40153a8ab8552f41a95d5e/packages/hardhat-core/test/internal/hardhat-network/helpers/useProvider.ts)
 
+NPM
+
+```
+npm i --save-dev ethereum-test-network
+```
+
+Yarn
+
+```
+yarn add --dev ethereum-test-network
+```
+
 ```ts
+import { TestNetwork } from 'ethereum-test-network';
+
 describe('eth test network', () => {
   let testnetwork: TestNetwork;
 
