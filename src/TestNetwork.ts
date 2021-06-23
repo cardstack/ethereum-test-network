@@ -56,7 +56,7 @@ export class TestNetwork {
       blockGasLimit: DEFAULT_BLOCK_GAS_LIMIT,
       ..._params,
     };
-    const logger = new HardhatNetworkFakeModuleLogger(true);
+    const logger = new HardhatNetworkFakeModuleLogger(false);
     const hardhatNetwork = new HardhatNetworkProvider(
       'istanbul',
       'WalletConnectTest',
