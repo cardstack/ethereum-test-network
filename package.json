@@ -1,6 +1,6 @@
 {
   "name": "ethereum-test-network",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Hardhat network to spin up for testing",
   "repository": "https://github.com/RobertoSnap/ethereum-test-network",
   "files": [
@@ -36,8 +36,8 @@
   "author": "Robertosnap <github@jakubsynowiec.info>",
   "license": "Apache-2.0",
   "dependencies": {
-    "ethers": "^5.3.1",
-    "hardhat": "^2.1.2",
+    "ethers": "5.3.1",
+    "hardhat": "2.1.2",
     "tslib": "~2.1.0"
   },
   "volta": {
