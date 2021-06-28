@@ -66,7 +66,7 @@ export class TestNetwork {
       true,
       true,
       true,
-      0,
+      500,
       logger,
       DEFAULT_GENESIS_ACCOUNTS,
       undefined,
