@@ -3,6 +3,7 @@ import { HardhatNetworkProvider } from 'hardhat/internal/hardhat-network/provide
 import { BackwardsCompatibilityProviderAdapter } from 'hardhat/internal/core/providers/backwards-compatibility';
 import { JsonRpcServer } from 'hardhat/internal/hardhat-network/jsonrpc/server';
 import { GenesisAccount } from 'hardhat/internal/hardhat-network/provider/node-types';
+import { BN } from 'ethereumjs-util';
 
 const DEFAULT_CHAIN_ID = 123;
 const DEFAULT_NETWORK_ID = 234;
@@ -63,6 +64,8 @@ export class TestNetwork {
       params.chainId,
       params.networkId,
       params.blockGasLimit,
+      undefined,
+      new BN(1),
       true,
       true,
       true,
