@@ -95,9 +95,13 @@ export class TestNetwork {
   }
   async close() {
     if (this.server) {
+      // turn off interval mining to prevent error messages from automine process
+      // running after testing completes
+      await this.provider.send("evm_setIntervalMining", [0]);
       await this.server.close();
       delete this.server;
     }
+
     delete this.provider;
   }
 }
