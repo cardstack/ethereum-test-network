@@ -31,7 +31,7 @@
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest src/ --coverage",
     "test:watch": "jest --watch",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "author": "Robertosnap <github@jakubsynowiec.info>",
   "license": "Apache-2.0",
